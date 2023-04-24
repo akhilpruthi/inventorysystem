@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Product SaleDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in context %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone_number}}</td>
+            <td>{{i.product_saledate}}</td>
+            <td><a href="{% url 'editUser' id=i.id %}"><button>EDIT</button></a></td>
+            <td><a href="{% url 'deleteUser' id=i.id %}"><button>DELETE</button></a></td>
+        </tr>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

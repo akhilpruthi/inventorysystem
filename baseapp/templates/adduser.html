@@ -1,26 +1,26 @@
 <h1>Add User Form</h1>
-<form method="POST" action="create" enctype="multipart/form-data">
+<form method="POST" action="{% url 'createUser' %}">
 
     {% csrf_token %}
     <tr>
         <td>Name</td>
-        <td><input type=" text" id="name" placeholder="ENTER YOUR NAME" required>
+        <td><input type=" text" name="name" placeholder="ENTER YOUR NAME" required>
         </td>
     </tr>
     <br /><br />
     <tr>
         <td>Address</td>
-        <td><input type="text" id="address" placeholder="ENTER YOUR ADDRESS" required></td>
+        <td><input type="text" name="address" placeholder="ENTER YOUR ADDRESS" required></td>
     </tr>
     <br /><br />
     <tr>
         <td>Phone Number</td>
-        <td><input type="text" id="phonenumber" placeholder="ENTER YOUR PHONENUMBER" required></td>
+        <td><input type="text" name="phone_number" placeholder="ENTER YOUR PHONENUMBER" required></td>
     </tr>
     <br /><br />
     <tr>
-        <td>Warranty</td>
-        <td><input type="text" id="warranty" placeholder="ENTER YOUR WARRANTY" required></td>
+        <td>Date of Sale</td>
+        <td><input type="text" name="product_saledate" placeholder="Date Of Sale" required></td>
     </tr>
     <br /><br />
     <tr>
